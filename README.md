@@ -12,6 +12,14 @@ Austo Motor Company is looking to expand from the UK into the US market and want
 
 ## What I did
 
+```mermaid
+flowchart LR
+    A[Raw customer data] --> B[Clean & check<br/>structure, types, nulls]
+    B --> C[Univariate analysis<br/>age, income, segment counts]
+    C --> D[Bivariate analysis<br/>income vs price, income vs segment]
+    D --> E[Insights &<br/>business takeaways]
+```
+
 1. Checked the data for structure, types, and missing values
 2. Looked at each variable on its own (age, income, segment counts)
 3. Looked at how variables relate to each other (income vs price, income vs segment)
@@ -25,11 +33,17 @@ Austo Motor Company is looking to expand from the UK into the US market and want
 | Sedan | 460 | 42,672 | 82,241 |
 | SUV | 237 | 59,304 | 99,316 |
 
-Hatchbacks are by far the most common purchase, but SUV buyers have the highest household income by a wide margin. Household income correlates with price at r = 0.35 (individual salary alone is r = 0.39), so income matters but it's not the whole story. Buyers also skew younger and are mostly working professionals.
+![Price distribution by vehicle segment](charts/price_by_segment.png)
+
+Hatchbacks are by far the most common purchase, but SUV buyers have the highest household income by a wide margin.
+
+![Correlation heatmap of customer and purchase variables](charts/correlation_heatmap.png)
+
+The heatmap turned up the biggest surprise in this analysis: age correlates with price at r = 0.79, much stronger than salary (r = 0.39) or household income (r = 0.35). Age is the strongest single predictor of what someone spends, more than how much they earn.
 
 ## Takeaway
 
-There's a clear case for segmenting the US launch: price/value messaging for hatchbacks aimed at younger, single-income buyers, and a premium push for SUVs where household income (often dual-income) is the bigger factor.
+Age, not income, is the strongest signal for what someone will buy. That points to a segmentation strategy built around life stage first (younger buyers toward hatchbacks, older/established buyers toward SUVs and sedans), with income as a secondary factor for pricing and financing offers.
 
 ## Tools
 
