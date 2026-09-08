@@ -47,7 +47,7 @@ Age, not income, is the strongest signal for what someone will buy. That points 
 
 ## Tools
 
-Python, pandas, matplotlib/seaborn - Jupyter notebook, exported to HTML.
+Python, pandas, matplotlib/seaborn - Jupyter notebook, exported to HTML. See `requirements.txt` for the package list (this repo has the exported HTML, not the original notebook, so it's for reference rather than something you can run directly).
 
 ## How to view it
 
